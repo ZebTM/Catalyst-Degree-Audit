@@ -5,7 +5,7 @@
   export { className as class };
 </script>
 <main>
-  <div class="{'desktop-1 ' + className}">
+  <div class={`desktop-1 ${className}`}>
     <div class="course-list-frame">
       <div class="course-list-bounds"></div>
       <AccordionItemStateClosed
@@ -46,12 +46,11 @@
     </div>
     <div class="line-1"></div>
     <div
-      class="grant-guernsey-s-degree-audit-bachelor-of-science-computer-science"
+      class="audit-title"
     >
       Grant Guernsey’s Degree Audit - Bachelor of Science, Computer Science
     </div>
   </div>
-  
 </main>
 
 <style>
@@ -190,14 +189,12 @@
     transform-origin: 0 0;
     transform: rotate(0.386deg) scale(1, 1);
   }
-  .desktop-1
-    .grant-guernsey-s-degree-audit-bachelor-of-science-computer-science {
+  .desktop-1 .audit-title {
     color: #000000;
     text-align: center;
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 32px;
     font-weight: 600;
-    position: absolute;
     left: 65px;
     top: 20px;
     width: 1310px;
