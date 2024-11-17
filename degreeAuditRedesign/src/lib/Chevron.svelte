@@ -1,26 +1,29 @@
 <script>
-    export let size = "48";
-    let className = "";
-    export { className as class };
-    const variantsClassName = "size-" + size;
-  </script>
-  
-  <img
-    class="{'chevron-up-size-20 ' + className + ' ' + variantsClassName}"
-    src="chevron-up-size-20.svg"
+  let className = "";
+  export { className as class };
+</script>
+
+<svg 
+  class={`chevron ${className}`} 
+  width="20" 
+  height="20" 
+  viewBox="0 0 20 20" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path 
+    d="M5 7.5L10 12.5L15 7.5" 
+    stroke="#888888" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
   />
-  
-  <style>
-    .chevron-up-size-20,
-    .chevron-up-size-20 * {
-      box-sizing: border-box;
-    }
-    .chevron-up-size-20 {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      overflow: visible;
-    }
-  </style>
+</svg>
+
+<style>
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+</style>
   
