@@ -1,8 +1,12 @@
 <script>
   import { slide } from 'svelte/transition';
+  import { onMount } from 'svelte';
+
   export let course;
   export let isExpanded = false;
   export let highlighted = false;
+
+  let isEnrolled = false;
 
   function toggleExpand() {
     isExpanded = !isExpanded;
@@ -10,6 +14,11 @@
 
   function canEnroll() {
     return course.prerequisites ? course.prerequisites.every(prereq => prereq.completed) : false;
+  }
+
+  function enroll() {
+    isEnrolled = true;
+    alert('You have successfully enrolled in the course!');
   }
 
   function handleKeyDown(event) {
@@ -51,9 +60,9 @@
     {#if !isCompletedCourse}
       <div class="action-container">
         {#if canEnroll()}
-          <button class="action-button enroll">
+          <button class="action-button enroll" on:click={enroll} disabled={isEnrolled}>
             <span class="material-icons-round">check_circle</span>
-            Enroll Here
+            {isEnrolled ? 'Enrolled' : 'Enroll Here'}
           </button>
         {:else}
           <button class="action-button prerequisites" class:expanded={isExpanded}>
@@ -359,4 +368,3 @@
     margin: -2px -6px;
   }
 </style>
- 
