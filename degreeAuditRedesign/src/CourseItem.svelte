@@ -31,7 +31,7 @@
   $: isCompletedCourse = course.grade !== undefined;
 </script>
 
-<div class="course-item" class:highlighted class:expanded={isExpanded}>
+<div class="course-item" class:highlighted class:expanded={isExpanded} class:greyed-out={!canEnroll() && !isCompletedCourse}>
   <div 
     class="course-header" 
     on:click={toggleExpand}
@@ -83,6 +83,7 @@
       </div>
     {/if}
   </div>
+
 
   {#if isExpanded && !isCompletedCourse && !canEnroll()}
     <div 
@@ -366,5 +367,9 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     padding: 2px 6px;
     margin: -2px -6px;
+  }
+
+  .greyed-out {
+    background-color: #464646; /* Adjust the color as needed */
   }
 </style>

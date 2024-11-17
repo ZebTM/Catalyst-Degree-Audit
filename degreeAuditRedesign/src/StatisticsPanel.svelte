@@ -40,30 +40,6 @@
 </script>
 
 <div class="statistics-container">
-  <div class="stat-section main-progress">
-    <h2>
-      <span class="material-icons-round">school</span>
-      Degree Progress Overview
-    </h2>
-    <div class="progress-bar">
-      <div class="progress" style="width: {completionPercentage}%"></div>
-      <span class="progress-text">{completionPercentage}% Complete</span>
-    </div>
-    <div class="progress-details">
-      <div class="stat-card">
-        <span class="stat-value completed">{totalCreditsCompleted}</span>
-        <span class="stat-label">Credits Completed</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-value remaining">{totalCreditsRemaining}</span>
-        <span class="stat-label">Credits Remaining</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-value">{totalCredits}</span>
-        <span class="stat-label">Total Required</span>
-      </div>
-    </div>
-  </div>
 
   <div class="stat-section academic-status">
     <h2>
@@ -90,6 +66,31 @@
     </div>
   </div>
 
+  <div class="stat-section main-progress">
+    <h2>
+      <span class="material-icons-round">school</span>
+      Degree Progress Overview
+    </h2>
+    <div class="progress-bar">
+      <div class="progress" style="width: {completionPercentage}%"></div>
+      <span class="progress-text">{completionPercentage}% Complete</span>
+    </div>
+    <div class="progress-details">
+      <div class="stat-card">
+        <span class="stat-value completed">{totalCreditsCompleted}</span>
+        <span class="stat-label">Credits Completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value remaining">{totalCreditsRemaining}</span>
+        <span class="stat-label">Credits Remaining</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">{totalCredits}</span>
+        <span class="stat-label">Total Required</span>
+      </div>
+    </div>
+  </div>
+  
   <div class="stat-section requirements">
     <h2>
       <span class="material-icons-round">checklist</span>
